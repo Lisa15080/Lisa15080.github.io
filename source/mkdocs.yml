@@ -1,8 +1,9 @@
-site_name: My Docs
+site_name: Portfolio
 
 nav:
   - Home: index.md
   - About: about.md
+  - Projects: projects.md
 
 theme:
   name: moonstone

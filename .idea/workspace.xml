@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75f00d77-9441-4cc3-8dad-434a514b716e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/source/docs/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/projects.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/projects.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/source/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,13 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source" />
+      <recent name="$PROJECT_DIR$/source/docs" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
