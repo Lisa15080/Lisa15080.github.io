@@ -1,9 +1,31 @@
 site_name: Portfolio
 
 nav:
-  - Home: index.md
-  - About: about.md
-  - Projects: projects.md
+  - Главная: index.md
+  - Обо мне: about.md
+  - Проекты: projects.md
+  - Лабораторные работы:
+      - Лабораторная 1: labs/lab1.md
+      - Лабораторная 2: labs/lab2.md
+  - Контакты: contacts.md
+
 
 theme:
-  name: moonstone
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на тёмную тему
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+
+markdown_extensions:
+  - attr_list
+
+
