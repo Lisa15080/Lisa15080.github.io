@@ -12,6 +12,9 @@ nav:
 
 theme:
   name: material
+  features:
+    - search.suggest
+    - search.highlight
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
