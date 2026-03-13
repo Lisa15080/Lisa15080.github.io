@@ -1,5 +1,8 @@
 site_name: Portfolio
 
+docs_dir: source/docs
+site_dir: ../site
+
 nav:
   - Главная: index.md
   - Обо мне: about.md
