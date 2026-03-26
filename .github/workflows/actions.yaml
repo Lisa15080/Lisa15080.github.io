@@ -1,0 +1,22 @@
+name: Deploy MkDocs Site
+
+on:
+  push:
+    branches:
+      - main
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REQUIREMENTS: requirements.txt
+          CONFIG_FILE: mkdocs.yml
+          EXTRA_PACKAGES: build-base
