@@ -7,6 +7,8 @@ nav:
   - Лабораторные работы:
       - Лабораторная 1: labs/lab1.md
       - Лабораторная 2: labs/lab2.md
+      - Лабораторная 4: labs/lab4.md
+      - Лабораторная 5: labs/lab5.md
   - Контакты: contacts.md
 
 theme:
