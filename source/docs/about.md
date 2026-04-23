@@ -1,5 +1,5 @@
 # Обо мне
-![Моё фото](assets/photo.jpg){: width=250}
+![Моё фото](assets/labs5_plots/boxplot.jpg){: width=250}
 
 ## 📚 Образование
 
