@@ -588,17 +588,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#positive-negative" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        В рамках работы исследуется задача бинарной классификации текстов (positive / negative). Основной акцент — сравнение различных способов векторизации текста и моделей машинного обучения.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -740,17 +729,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#positive-negative" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        В рамках работы исследуется задача бинарной классификации текстов (positive / negative). Основной акцент — сравнение различных способов векторизации текста и моделей машинного обучения.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -821,12 +799,13 @@
 <h2 id="ipynb-board">Ссылка на ipynb-board</h2>
 <p><a href="https://colab.research.google.com/drive/1WyookaJJn71gDobMLEMyxG0pT3ly4W1X?usp=sharing">Google-colab notebook</a></p>
 <h2 id="_1">Введение</h2>
-<h2 id="positive-negative">В рамках работы исследуется задача бинарной классификации текстов (positive / negative). Основной акцент — сравнение различных способов векторизации текста и моделей машинного обучения.</h2>
+<p>В рамках работы исследуется задача бинарной классификации текстов (positive / negative). Основной акцент — сравнение различных способов векторизации текста и моделей машинного обучения.</p>
+<hr />
 <h2 id="_2">Цель работы</h2>
 <ul>
 <li>Исследовать влияние разных методов векторизации текста</li>
 <li>Сравнить несколько моделей классификации</li>
-<li>Проанализировать изменение метрики <strong>f1-score</strong></li>
+<li>Проанализировать изменение метрики f1-score</li>
 </ul>
 <hr />
 <h2 id="_3">Используемые методы</h2>
@@ -845,7 +824,7 @@
 <li>Простые эвристические модели</li>
 </ul>
 <hr />
-<h1 id="classification_report">📈 Результаты classification_report</h1>
+<h1 id="classification_report">Результаты classification_report</h1>
 <h2 id="1-countvectorizer-logisticregression">1. CountVectorizer (униграммы) + LogisticRegression</h2>
 <table>
 <thead>
@@ -942,7 +921,7 @@
 </tr>
 </tbody>
 </table>
-<p>немного хуже LogisticRegression</p>
+<p>Немного хуже LogisticRegression</p>
 <hr />
 <h2 id="4-countvectorizer">4. CountVectorizer (триграммы)</h2>
 <table>
@@ -973,9 +952,14 @@
 <td>—</td>
 <td><strong>~0.63</strong></td>
 </tr>
+<tr>
+<td>Сильное падение качества</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<p>сильное падение качества</p>
 <hr />
 <h1 id="tf-idf">TF-IDF Векторизация</h1>
 <h2 id="5-tf-idf">5. TF-IDF (униграммы)</h2>
@@ -1040,9 +1024,14 @@
 <td>—</td>
 <td><strong>~0.45</strong></td>
 </tr>
+<tr>
+<td>Скор упал из-за переобучения и разреженности</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<p>❗ Скор упал: переобучение + разреженность</p>
 <hr />
 <h2 id="7-tf-idf">7. TF-IDF (биграммы)</h2>
 <table>
@@ -1073,9 +1062,14 @@
 <td>—</td>
 <td><strong>~0.70</strong></td>
 </tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<hr />
 <h2 id="8-tf-idf">8. TF-IDF (триграммы)</h2>
 <table>
 <thead>
@@ -1271,33 +1265,33 @@
 </tbody>
 </table>
 <hr />
-<h2 id="f1-score">📊 Анализ качества методов (по f1-score)</h2>
+<h2 id="f1-score">Анализ качества методов (по f1-score)</h2>
 <h2 id="f1-score_1">Хорошие методы (высокий f1-score)</h2>
 <p>К методам с наилучшим качеством относятся:</p>
 <ul>
 <li><strong>Smart tokenizer + LogisticRegression</strong></li>
-<li>macro avg f1-score: <strong>0.78</strong></li>
+<li>macro avg f1-score: 0.78</li>
 <li>
 <p>одинаковый f1-score по классам: 0.78 / 0.78</p>
 </li>
 <li>
 <p><strong>CountVectorizer (униграммы) + LogisticRegression</strong></p>
 </li>
-<li>macro avg f1-score: <strong>0.77</strong></li>
+<li>macro avg f1-score: 0.77</li>
 <li>
 <p>сбалансированные значения по классам</p>
 </li>
 <li>
 <p><strong>TF-IDF (униграммы)</strong></p>
 </li>
-<li>macro avg f1-score: <strong>0.75–0.76</strong></li>
+<li>macro avg f1-score: 0.75–0.76</li>
 <li>
 <p>близкие значения f1-score для обоих классов</p>
 </li>
 <li>
 <p><strong>CountVectorizer + LinearSVC</strong></p>
 </li>
-<li>macro avg f1-score: <strong>0.75</strong></li>
+<li>macro avg f1-score: 0.75</li>
 <li>незначительная разница между классами</li>
 </ul>
 <hr />
@@ -1306,26 +1300,26 @@
 <ul>
 <li><strong>CountVectorizer + XGBClassifier</strong></li>
 <li>
-<p>macro avg f1-score: <strong>0.72–0.73</strong></p>
+<p>macro avg f1-score: 0.72–0.73</p>
 </li>
 <li>
 <p><strong>TF-IDF (биграммы)</strong></p>
 </li>
-<li>macro avg f1-score: <strong>~0.70</strong></li>
+<li>macro avg f1-score: ~0.70</li>
 </ul>
 <hr />
 <h2 id="_8">Слабые методы (снижение качества)</h2>
 <p>Методы, у которых наблюдается падение f1-score:</p>
 <ul>
 <li><strong>CountVectorizer (триграммы)</strong></li>
-<li>macro avg f1-score: <strong>~0.63</strong></li>
+<li>macro avg f1-score: ~0.63</li>
 <li>
 <p>сильный разрыв между классами</p>
 </li>
 <li>
 <p><strong>TF-IDF (триграммы)</strong></p>
 </li>
-<li>macro avg f1-score: <strong>~0.63</strong></li>
+<li>macro avg f1-score: ~0.63</li>
 <li>аналогичное поведение</li>
 </ul>
 <hr />
@@ -1333,7 +1327,7 @@
 <p>Методы с наименьшим качеством:</p>
 <ul>
 <li><strong>TF-IDF (пентаграммы)</strong></li>
-<li>macro avg f1-score: <strong>~0.45</strong></li>
+<li>macro avg f1-score: ~0.45</li>
 <li>сильный дисбаланс между классами</li>
 </ul>
 <hr />
@@ -1342,38 +1336,38 @@
 <ul>
 <li><strong>Без stop-words</strong></li>
 <li>
-<p>f1-score: <strong>1.00 / 1.00</strong></p>
+<p>f1-score: 1.00 / 1.00</p>
 </li>
 <li>
 <p><strong>Символьная векторизация + LogisticRegression</strong></p>
 </li>
 <li>
-<p>f1-score: <strong>0.99 / 1.00</strong></p>
+<p>f1-score: 0.99 / 1.00</p>
 </li>
 <li>
 <p><strong>Символьная + XGB</strong></p>
 </li>
 <li>
-<p>f1-score: <strong>1.00 / 1.00</strong></p>
+<p>f1-score: 1.00 / 1.00</p>
 </li>
 <li>
 <p><strong>Символьная + LinearSVC</strong></p>
 </li>
-<li>f1-score: <strong>1.00 / 1.00</strong></li>
+<li>f1-score: 1.00 / 1.00</li>
 </ul>
 <hr />
 <h2 id="_9">Отдельный случай</h2>
 <ul>
 <li><strong>Простая модель (смайлики)</strong></li>
-<li>negative: f1-score = <strong>0.49</strong></li>
-<li>positive: f1-score = <strong>0.75</strong></li>
+<li>negative: f1-score = 0.49</li>
+<li>positive: f1-score = 0.75</li>
 <li>наблюдается сильная разница между классами</li>
 </ul>
 <h2 id="_10">Выводы</h2>
 <ul>
-<li>Лучшие результаты достигаются при использовании <strong>униграмм и классических моделей</strong></li>
+<li>Лучшие результаты достигаются при использовании униграмм и классических моделей</li>
 <li>Увеличение размера n-грамм (до триграмм и пентаграмм) может сопровождаться снижением качества</li>
-<li>Некоторые методы показывают <strong>идеальные значения метрик (до 1.00)</strong></li>
+<li>Некоторые методы показывают идеальные значения метрик (до 1.00)</li>
 </ul>
 
 

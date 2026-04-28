@@ -3,29 +3,26 @@
 ## Ссылка на ipynb-board
 [Google-colab notebook](https://colab.research.google.com/drive/1WyookaJJn71gDobMLEMyxG0pT3ly4W1X?usp=sharing)
 ## Введение
-
 В рамках работы исследуется задача бинарной классификации текстов (positive / negative). Основной акцент — сравнение различных способов векторизации текста и моделей машинного обучения.
----
 
+---
 ## Цель работы
 
 * Исследовать влияние разных методов векторизации текста
 * Сравнить несколько моделей классификации
-* Проанализировать изменение метрики **f1-score**
+* Проанализировать изменение метрики f1-score
 
 ---
 
 ## Используемые методы
 
 ### Векторизация:
-
 * CountVectorizer (униграммы, триграммы)
 * TF-IDF (1–5 граммы)
 * Символьная векторизация
 * Кастомные токенизаторы
 
 ### Модели:
-
 * LogisticRegression
 * XGBClassifier
 * LinearSVC
@@ -33,10 +30,9 @@
 
 ---
 
-# 📈 Результаты classification_report
+# Результаты classification_report
 
 ## 1. CountVectorizer (униграммы) + LogisticRegression
-
 | класс         | precision | recall | f1-score |
 | ------------- | --------- | ------ | -------- |
 | negative      | 0.76      | 0.77   | 0.76     |
@@ -46,7 +42,6 @@
 ---
 
 ## 2. CountVectorizer + XGBClassifier
-
 | класс         | precision | recall | f1-score      |
 | ------------- | --------- | ------ | ------------- |
 | negative      | 0.74      | 0.68   | 0.71          |
@@ -58,33 +53,29 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 3. CountVectorizer + LinearSVC
-
 | класс         | precision | recall | f1-score |
 | ------------- | --------- | ------ | -------- |
 | negative      | 0.73      | 0.77   | 0.75     |
 | positive      | 0.76      | 0.72   | 0.74     |
 | **macro avg** | —         | —      | **0.75** |
 
-немного хуже LogisticRegression
+Немного хуже LogisticRegression
 
 ---
 
 ## 4. CountVectorizer (триграммы)
-
 | класс         | precision | recall | f1-score  |
 | ------------- | --------- | ------ | --------- |
 | negative      | 0.71      | 0.46   | 0.56      |
 | positive      | 0.61      | 0.82   | 0.70      |
 | **macro avg** | —         | —      | **~0.63** |
-
-сильное падение качества
+Сильное падение качества
 
 ---
 
 # TF-IDF Векторизация
 
 ## 5. TF-IDF (униграммы)
-
 | класс         | precision | recall | f1-score      |
 | ------------- | --------- | ------ | ------------- |
 | negative      | 0.77      | 0.73   | 0.75          |
@@ -96,29 +87,24 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 6. TF-IDF (пентаграммы)
-
 | класс         | precision | recall | f1-score  |
 | ------------- | --------- | ------ | --------- |
 | negative      | 0.95      | 0.11   | 0.20      |
 | positive      | 0.53      | 0.99   | 0.69      |
 | **macro avg** | —         | —      | **~0.45** |
-
-❗ Скор упал: переобучение + разреженность
+Скор упал из-за переобучения и разреженности
 
 ---
 
 ## 7. TF-IDF (биграммы)
-
 | класс         | precision | recall | f1-score  |
 | ------------- | --------- | ------ | --------- |
 | negative      | 0.72      | 0.66   | 0.69      |
 | positive      | 0.69      | 0.75   | 0.72      |
 | **macro avg** | —         | —      | **~0.70** |
-
 ---
 
 ## 8. TF-IDF (триграммы)
-
 | класс         | precision | recall | f1-score  |
 | ------------- | --------- | ------ | --------- |
 | negative      | 0.72      | 0.45   | 0.56      |
@@ -130,7 +116,6 @@ f1-score ухудшился относительно LogisticRegression
 # Дополнительные методы
 
 ## 9. Smart tokenizer + LogisticRegression
-
 | класс         | precision | recall | f1-score |
 | ------------- | --------- | ------ | -------- |
 | negative      | 0.77      | 0.80   | 0.78     |
@@ -140,7 +125,6 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 10. Без stop-words
-
 | класс    | precision | recall | f1-score |
 | -------- | --------- | ------ | -------- |
 | negative | 1.00      | 1.00   | 1.00     |
@@ -149,7 +133,6 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 11. Простая модель (смайлики)
-
 | класс    | precision | recall | f1-score |
 | -------- | --------- | ------ | -------- |
 | negative | 1.00      | 0.32   | 0.49     |
@@ -159,7 +142,6 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 12. Символьная векторизация + LogisticRegression
-
 | класс    | precision | recall | f1-score |
 | -------- | --------- | ------ | -------- |
 | negative | 1.00      | 0.99   | 0.99     |
@@ -168,7 +150,6 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 13. Символьная + XGB
-
 | класс    | precision | recall | f1-score |
 | -------- | --------- | ------ | -------- |
 | negative | 1.00      | 1.00   | 1.00     |
@@ -177,7 +158,6 @@ f1-score ухудшился относительно LogisticRegression
 ---
 
 ## 14. Символьная + LinearSVC
-
 | класс    | precision | recall | f1-score |
 | -------- | --------- | ------ | -------- |
 | negative | 1.00      | 0.99   | 1.00     |
@@ -185,26 +165,26 @@ f1-score ухудшился относительно LogisticRegression
 
 ---
 
-## 📊 Анализ качества методов (по f1-score)
+## Анализ качества методов (по f1-score)
 
 ## Хорошие методы (высокий f1-score)
 
 К методам с наилучшим качеством относятся:
 
 - **Smart tokenizer + LogisticRegression**
-  - macro avg f1-score: **0.78**
+  - macro avg f1-score: 0.78
   - одинаковый f1-score по классам: 0.78 / 0.78
 
 - **CountVectorizer (униграммы) + LogisticRegression**
-  - macro avg f1-score: **0.77**
+  - macro avg f1-score: 0.77
   - сбалансированные значения по классам
 
 - **TF-IDF (униграммы)**
-  - macro avg f1-score: **0.75–0.76**
+  - macro avg f1-score: 0.75–0.76
   - близкие значения f1-score для обоих классов
 
 - **CountVectorizer + LinearSVC**
-  - macro avg f1-score: **0.75**
+  - macro avg f1-score: 0.75
   - незначительная разница между классами
 
 ---
@@ -214,10 +194,10 @@ f1-score ухудшился относительно LogisticRegression
 Методы с заметно более низким, но приемлемым качеством:
 
 - **CountVectorizer + XGBClassifier**
-  - macro avg f1-score: **0.72–0.73**
+  - macro avg f1-score: 0.72–0.73
 
 - **TF-IDF (биграммы)**
-  - macro avg f1-score: **~0.70**
+  - macro avg f1-score: ~0.70
 
 ---
 
@@ -226,11 +206,11 @@ f1-score ухудшился относительно LogisticRegression
 Методы, у которых наблюдается падение f1-score:
 
 - **CountVectorizer (триграммы)**
-  - macro avg f1-score: **~0.63**
+  - macro avg f1-score: ~0.63
   - сильный разрыв между классами
 
 - **TF-IDF (триграммы)**
-  - macro avg f1-score: **~0.63**
+  - macro avg f1-score: ~0.63
   - аналогичное поведение
 
 ---
@@ -240,7 +220,7 @@ f1-score ухудшился относительно LogisticRegression
 Методы с наименьшим качеством:
 
 - **TF-IDF (пентаграммы)**
-  - macro avg f1-score: **~0.45**
+  - macro avg f1-score: ~0.45
   - сильный дисбаланс между классами
 
 ---
@@ -250,28 +230,28 @@ f1-score ухудшился относительно LogisticRegression
 Методы, где значения f1-score достигают максимума:
 
 - **Без stop-words**
-  - f1-score: **1.00 / 1.00**
+  - f1-score: 1.00 / 1.00
 
 - **Символьная векторизация + LogisticRegression**
-  - f1-score: **0.99 / 1.00**
+  - f1-score: 0.99 / 1.00
 
 - **Символьная + XGB**
-  - f1-score: **1.00 / 1.00**
+  - f1-score: 1.00 / 1.00
 
 - **Символьная + LinearSVC**
-  - f1-score: **1.00 / 1.00**
+  - f1-score: 1.00 / 1.00
 
 ---
 
 ## Отдельный случай
 
 - **Простая модель (смайлики)**
-  - negative: f1-score = **0.49**
-  - positive: f1-score = **0.75**
+  - negative: f1-score = 0.49
+  - positive: f1-score = 0.75
   - наблюдается сильная разница между классами
 
 ## Выводы
-- Лучшие результаты достигаются при использовании **униграмм и классических моделей**
+- Лучшие результаты достигаются при использовании униграмм и классических моделей
 - Увеличение размера n-грамм (до триграмм и пентаграмм) может сопровождаться снижением качества
-- Некоторые методы показывают **идеальные значения метрик (до 1.00)**
+- Некоторые методы показывают идеальные значения метрик (до 1.00)
 
